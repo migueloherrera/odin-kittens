@@ -1,0 +1,8 @@
+<% if @kitten.errors.any? %>
+	The form contains <%= pluralize(@kitten.errors.count, "error") %>.
+	<ul>
+		<% @kitten.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
